@@ -18,22 +18,24 @@ if (localStorage.tasks != null) {
 }
 
 addBtn.onclick = function () {
-    let newTask = {
-        title: task.value,
-        complete: false,
-    };
+    if (task.value !== null) {
+        let newTask = {
+            title: task.value,
+            complete: false,
+        };
 
-    if (mood === "create") {
-        tasksArr.push(newTask);
-    } else {
-        tasksArr[tmp] = newTask;
-        mood = 'create';
-        addBtn.innerHTML = 'create';
+        if (mood === "create") {
+            tasksArr.push(newTask);
+        } else {
+            tasksArr[tmp] = newTask;
+            mood = 'create';
+            addBtn.innerHTML = 'create';
+        }
+
+        localStorage.setItem('tasks', JSON.stringify(tasksArr));
+        clearData();
+        show();
     }
-
-    localStorage.setItem('tasks', JSON.stringify(tasksArr));
-    clearData();
-    show();
 };
 
 // clear
@@ -54,7 +56,7 @@ function show() {
     for (let i = 0; i < tasksArr.length; i++) {
         table += `
         <tr>
-        <td>${i}</td>
+        <td>${i + 1}</td>
         <td>${tasksArr[i].title}</td>
         <td><button onclick="updateTask(${i})" id="Update">Update</button></td>
         <td><button onclick="deleteTask(${i})" id="Delete">Delete</button></td>
