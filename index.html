@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do to list</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>to do list app</h1>
+
+    <div class="inputs">
+        <input type="text" placeholder="Enter your task ?" id="task" name="task">
+        <button id="add">Add</button>
+    </div>
+
+    <div class="outputs">
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Task</th>
+                <th>Update</th>
+                <th>Delete</th>
+                <th>Done</th>
+            </tr>
+            <tbody id="tbody">
+
+                <tr>
+                    <td>1</td>
+                    <td>write</td>
+                    <td><button id="Update">Update</button></td>
+                    <td><button id="Delete">Delete</button></td>
+                    <td>
+                        <input type="checkbox" name="done" id="done">
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
