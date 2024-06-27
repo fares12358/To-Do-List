@@ -9,12 +9,21 @@ body {
     width: 100%;
     height: 100vh;
     padding: 100px;
-    background: #fff;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: start;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
+
+.text-coloring{
+    color: transparent !important;
+    background-clip: text;
+    animation-duration: 5s;
+    background-image: linear-gradient(-225deg, #8c16d0 0%, #7C64D5 48%, #5418d7 100%);
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+}
+
 
 h1 {
     font-size: 60px;
@@ -22,7 +31,15 @@ h1 {
     margin-right: auto;
     text-transform: uppercase;
     margin-bottom: 30px;
+    color: transparent !important;
+    background-clip: text;
+    animation-duration: 5s;
+    background-image: linear-gradient(-225deg, #8c16d0 0%, #7C64D5 48%, #5418d7 100%);
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+
 }
+
+
 
 .inputs {
     width: 100%;
@@ -30,20 +47,24 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .inputs input {
     width: 500px;
     height: 50px;
     background: transparent;
-    border: 3px solid rgb(0, 0, 0);
+    border: 3px solid rgb(115, 11, 147);
     border-radius: 30px;
     padding: 20px 30px;
     font-size: 25px;
     font-weight: 600;
-    color: #000000;
+    color: #520b4a;
 
+}
 
+#task::placeholder{
+    color: #4c0b7d;
 }
 
 .inputs button {
@@ -55,6 +76,9 @@ h1 {
     font-weight: 600;
     border: none;
     cursor: pointer;
+    background: transparent;
+    color: #520b4a;
+
 }
 
 .outputs {
@@ -68,7 +92,18 @@ th,
 td {
     padding: 30px;
     font-size: 30px;
+    color: #950c85;
+
 }
+th{
+    color: transparent !important;
+    background-clip: text;
+    animation-duration: 5s;
+    background-image: linear-gradient(-225deg, #8c16d0 0%, #7C64D5 48%, #5418d7 100%);
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+}
+
+
 
 #Delete,
 #Update {
@@ -77,113 +112,18 @@ td {
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
-    border: 2px solid;
+    border: none;
+    background: transparent;
+    color: #950c85;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 #done {
     width: 30px;
     height: 30px;
-}
-
-@media (max-width:685px) {
-    body {
-        width: 100%;
-        height: 100vh;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    .inputs {
-        flex-direction: column;
-    }
-
-    .inputs input {
-        width: 350px;
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .inputs button {
-        border: 2px solid rgb(0, 0, 0);
-        padding: 5px 10px;
-    }
-
-    .outputs {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-    }
-    th,
-    td {
-        padding: 20px;
-        font-size: 20px;
-    }
-
-    #Delete,
-    #Update {
-        width: 80px;
-        height: 30px;
-        cursor: pointer;
-        font-size: 15px;
-        font-weight: 400;
-        border: 1px solid;
-    }
-    #done {
-        width: 20px;
-        height: 20px;
-    }
 
 }
 
+/* animation */
 
-@media (max-width:368px) {
-    h1 {
-        font-size: 25px;
-    }
-
-    .inputs input {
-        width: 280px;
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-
-    .inputs button {
-        border: 2px solid rgb(0, 0, 0);
-        font-size: 18px;
-        padding: 5px 10px;
-    }
-
-
-
-}
-
-@media (max-width:470px) {
-
-    .outputs {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-    }
-    th,
-    td {
-        padding: 5px;
-        font-size: 15px;
-    }
-
-    #Delete,
-    #Update {
-        width: 50px;
-        height: 20px;
-        cursor: pointer;
-        font-size: 10px;
-        font-weight: 300;
-        border: 1px solid;
-    }
-    #done {
-        width: 15px;
-        height: 15px;
-    }
-}
